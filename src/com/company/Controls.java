@@ -5,10 +5,15 @@ import java.awt.*;
 
 public class Controls extends JPanel {
     private JButton hello, world;
+    static EventBus bus;
 
     Controls() {
         init();
         buildUI();
+    }
+
+    public static void addEventBus(EventBus newBus) {
+        bus = newBus;
     }
 
     void init() {
@@ -21,5 +26,13 @@ public class Controls extends JPanel {
 
         add(hello);
         add(world);
+
+        hello.addActionListener(e -> {
+            bus.emmit("hello clicked");
+        });
+
+        world.addActionListener(e -> {
+            bus.emmit("world clicked");
+        });
     }
 }
