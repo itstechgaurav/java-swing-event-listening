@@ -1,0 +1,14 @@
+{
+  "name": "javaswingtesteventlistening",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "git pull origin master",
+    "start": "cd out/production/\"java swing event listening\" && java com.company.Main",
+    "upload": "git add . && git commit -m \"added\" && git push origin master",
+    "runonly": "cd out/production/\"java swing event listening\" && java com.company.Main"
+  },
+  "author": "",
+  "license": "ISC"
+}
