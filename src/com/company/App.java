@@ -19,6 +19,7 @@ public class App extends JFrame {
 
     void init() {
         setSize(new Dimension(App.WIDTH, App.HEIGHT));
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
     }
 
